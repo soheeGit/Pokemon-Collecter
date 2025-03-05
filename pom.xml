@@ -34,7 +34,7 @@
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.example.Main</mainClass>   <!-- Main 클래스를 명시 -->
+                            <mainClass>Main</mainClass>   <!-- Main 클래스를 명시 -->
                         </configuration>
                     </execution>
                 </executions>
