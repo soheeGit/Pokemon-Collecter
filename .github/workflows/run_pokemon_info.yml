@@ -31,4 +31,4 @@ jobs:
     - name: Build and run the Java application
       run: |
         mvn clean package
-        mvn exec:java
+        mvn exec:java -Dexec.mainClass="Main"
