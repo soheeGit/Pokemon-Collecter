@@ -28,6 +28,6 @@ jobs:
     - name: Build and run the Java application
       run: |
         mvn install
-        mvn exec:java
+        mvn exec:java -X 
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}  # GitHub Token을 비밀 환경 변수로 설정
