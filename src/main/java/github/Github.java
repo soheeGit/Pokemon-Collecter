@@ -11,7 +11,7 @@ import java.util.List;
 public class Github {
     String token = System.getenv("GH_TOKEN");
     String OWNER = "soheeGit";
-    String REPO = "PokeInfo-Collector";
+    String REPO = "Pokemon-Collecter";
 
     public void createGitHubIssue(String name, String image, List<Pokemon.Type> types, String height, String weight,
                                   int hp, int attack, int defense, int spAttack, int spDefense, int speed,
