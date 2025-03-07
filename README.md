@@ -36,5 +36,6 @@ pom.xml 파일에 명시된 의존성을 Maven을 통해 설치합니다.
 포켓몬 정보가 GitHub Issue로 등록되면, 아래와 같은 형식으로 출력됩니다:
 
 
-<img width="943" alt="image" src="https://github.com/user-attachments/assets/a036a77a-b4ab-4e53-a925-67859d59b76e" />
+![image](https://github.com/user-attachments/assets/c529da62-6000-4945-97bb-fdcba4787ee9)
+
 
