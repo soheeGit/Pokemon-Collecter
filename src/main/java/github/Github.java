@@ -19,7 +19,8 @@ public class Github {
         try {
             // 타입을 동적으로 처리하는 부분
             String typesString = String.join(", ", types.stream().map(type -> type.getType().getName()).toList());
-
+            double heightD = Double.parseDouble(height) / 10.0;
+            double weightD = Double.parseDouble(weight) / 10.0;
             // 기본 능력치 부분을 동적으로 생성
             StringBuilder statsBuilder = new StringBuilder();
             statsBuilder.append(String.format(" - **HP**: %d\\n", hp));
@@ -35,7 +36,7 @@ public class Github {
                           "title": "오늘의 포켓몬: %s",
                           "body": "## 오늘의 포켓몬: %s\\n\\n![포켓몬 이미지](%s)\\n\\n\\n\\n#### 🔹 기본 정보\\n- **이름**: %s\\n- **타입**: %s\\n- **키**: %sm\\n- **몸무게**: %skg\\n\\n#### 💪 기본 능력치\\n%s\\n\\n---\\n\\n#### 🔄 진화 정보\\n- **기본포켓몬**: %s\\n- **첫 번째 진화**: %s\\n- **두 번째 진화**: %s\\n\\n📌 *PokéAPI 데이터를 기반으로 자동 생성된 이슈입니다.*"
                         }
-                    """, name, name, image, name, typesString, height, weight, statsBuilder.toString(), basePokemon, firstEvolutionName, secondEvolutionName != null && !secondEvolutionName.isEmpty() ? secondEvolutionName : "없음");
+                    """, name, name, image, name, typesString, heightD, weightD, statsBuilder.toString(), basePokemon, firstEvolutionName, secondEvolutionName != null && !secondEvolutionName.isEmpty() ? secondEvolutionName : "없음");
 
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://api.github.com/repos/%s/%s/issues".formatted(OWNER, REPO)))
